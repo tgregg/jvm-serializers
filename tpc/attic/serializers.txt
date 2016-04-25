@@ -67,3 +67,6 @@ xml/xstream+c-woodstox
 xml/xstream+c-aalto
 xml/xstream+c-fastinfo
 xml/javolution
+ion/ion-java/binary
+ion/ion-java/binary-symtabs
+ion/ion-java/text

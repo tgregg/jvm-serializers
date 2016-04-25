@@ -4,6 +4,9 @@ import serializers.avro.AvroGeneric;
 import serializers.avro.AvroSpecific;
 import serializers.cks.CksBinary;
 import serializers.cks.CksText;
+import serializers.ion.IonJavaBinary;
+import serializers.ion.IonJavaBinarySymbolTables;
+import serializers.ion.IonJavaText;
 import serializers.jackson.*;
 import serializers.javaxjson.*;
 import serializers.json.*;
@@ -128,6 +131,10 @@ public class BenchmarkRunner extends MediaItemBenchmark
         
         // Jackson's column-oriented variants for formats that usually use key/value notation
         JacksonWithColumnsDatabind.registerAll(groups);
+
+        IonJavaBinary.register(groups);
+        IonJavaBinarySymbolTables.register(groups);
+        IonJavaText.register(groups);
 
 	DSLPlatform.register(groups);
     }
